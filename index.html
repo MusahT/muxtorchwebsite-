@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muxtorch Delivery</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <body>
     <header>
         <h1>Muxtorch Delivery</h1
@@ -32,7 +32,19 @@
             <a href="https://instagram.com" target="_blank">Instagram</a>
         </div>
     </footer>
-</body>
+</body><script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+        slides.forEach(slide => (slide.style.display = "none"));
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = "block";
+    }
+
+    setInterval(showSlides, 3000);
+    showSlides(); // Initial call
+</script>
     <nav style="background-color: #333; padding: 1rem;">
     <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: space-around;">
         <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
@@ -47,7 +59,20 @@
     <img src="slide3.jpg" class="slide" style="width: 100%; display: none;">
 </div>
 
-<script>
+<script><script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+    });
+</script>
     let slides = document.querySelectorAll(".slide");
     let index = 0;
 
@@ -222,12 +247,16 @@ footer .social-media a {
             <a href="https://twitter.com/muxtorch" target="_blank">Twitter</a>
             <a href="https://instagram.com/muxtorch" target="_blank">Instagram</a>
         </div>
-    </footer>
-    <footer style="background-color: #333; color: white; padding: 1rem; text-align: center;">
+    </footer>style="background-color: #333; color: white; padding: 1rem; text-align: center;">
     <p>Follow us on:</p>
     <a href="https://facebook.com/muxtorch" style="color: white; margin-right: 1rem;">Facebook</a>
     <a href="https://twitter.com/muxtorch" style="color: white; margin-right: 1rem;">Twitter</a>
     <a href="https://instagram.com/muxtorch" style="color: white;">Instagram</a>
+    </<footer>
+    <p>Follow us on:</p>
+    <a href="https://facebook.com/muxtorch" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/muxtorch" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/muxtorch" target="_blank"><i class="fab fa-instagram"></i></a>
     </footer>
 
 </body><h1 class="fade-in">Welcome to Muxtorch Delivery</h1>
