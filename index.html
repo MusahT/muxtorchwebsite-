@@ -41,6 +41,22 @@
         <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
     </ul>
     </nav>
+    <div class="slideshow">
+    <img src="slide1.jpg" class="slide" style="width: 100%; display: block;">
+    <img src="slide2.jpg" class="slide" style="width: 100%; display: none;">
+    <img src="slide3.jpg" class="slide" style="width: 100%; display: none;">
+</div>
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].style.display = "none";
+        index = (index + 1) % slides.length;
+        slides[index].style.display = "block";
+    }, 3000); // Change every 3 seconds
+</script>
 </html>
 /* General Styles */
 body {
