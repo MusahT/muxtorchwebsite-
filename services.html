@@ -3,87 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <title>Services - Muxtorch Delivery</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline styles for visual enhancement (move to style.css if preferred) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #007bff;
+            color: white;
+        }
+        main {
+            padding: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        footer .social-media a {
+            color: white;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <h1>Our Services</h1>
-    <ul>
-        <li>Reliable Delivery</li>
-        <li>Fast Courier Services</li>
-        <li>Real-time Tracking</li>
-    </ul>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Muxtorch Delivery</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav style="background-color: #333; padding: 1rem;">
-    <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: space-around;">
-        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-        <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
-        <li><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
-        <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
-    </ul>
-    </nav>
+    <!-- Header Section -->
     <header>
-        <h1>Muxtorch Delivery</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Our Services</h1>
+        <p>Discover the wide range of reliable services we offer to meet your delivery needs.</p>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <h2>Our Services</h2>
+        <h2>What We Offer</h2>
         <ul>
             <li>Reliable Parcel Delivery</li>
             <li>Efficient Business Logistics</li>
             <li>Partner Program for Vehicle Owners</li>
+            <li>Fast Courier Services</li>
+            <li>Real-Time Tracking System</li>
         </ul>
     </main>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Muxtorch Delivery</p>
+        <p>Follow us on:</p>
         <div class="social-media">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com/muxtorch" target="_blank">Facebook</a>
+            <a href="https://twitter.com/muxtorch" target="_blank">Twitter</a>
+            <a href="https://instagram.com/muxtorch" target="_blank">Instagram</a>
         </div>
-    </footer> style="background-color: #333; color: white; padding: 1rem; text-align: center;">
-    <p>Follow us on:</p>
-    <a href="https://facebook.com/muxtorch" style="color: white; margin-right: 1rem;">Facebook</a>
-    <a href="https://twitter.com/muxtorch" style="color: white; margin-right: 1rem;">Twitter</a>
-    <a href="https://instagram.com/muxtorch" style="color: white;">Instagram</a>
     </footer>
-</body>
-</html><script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        });
 
-        elements.forEach(el => observer.observe(el));
-    });
-</script>
+    <!-- JavaScript for Fade-In Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
