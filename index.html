@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muxtorch Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="slide1.jpg" alt="Reliable Delivery" style="width:100%;">
+            <div class="text">Reliable Delivery Services</div>
+        </div>
+        <div class="slide fade">
+            <img src="slide2.jpg" alt="Fast Service" style="width:100%;">
+            <div class="text">Fast and Efficient Service</div>
+        </div>
+        <div class="slide fade">
+            <img src="slide3.jpg" alt="Customer Support" style="width:100%;">
+            <div class="text">24/7 Customer Support</div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="fade-in">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <p>"Muxtorch Delivery exceeded my expectations with their fast and reliable service!" - John Doe</p>
+            <p>"Highly recommend for their professionalism and great customer support." - Jane Smith</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us on:</p>
+        <div class="social-media">
+            <a href="https://facebook.com/muxtorch" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/muxtorch" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/muxtorch" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Slideshow Script
+        let currentIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlides() {
+            slides.forEach(slide => (slide.style.display = "none"));
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].style.display = "block";
+        }
+
+        setInterval(showSlides, 3000); // Change slide every 3 seconds
+        showSlides(); // Initial display
+
+        // Fade-in Animation Script
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
