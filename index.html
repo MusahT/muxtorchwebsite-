@@ -13,10 +13,19 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Fast and Reliable Parcel Delivery Service</h1>
+            <p>Your Trusted Partner for All Logistics Needs</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div>
+    </header>
 
     <!-- Slideshow -->
     <div class="slideshow-container">
@@ -34,28 +43,56 @@
         </div>
     </div>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-box"></i>
+                <h3>Shipment Insurance</h3>
+                <p>Secure your packages with our trusted insurance options.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Pick & Drop-off Locations</h3>
+                <p>Convenient pick-up and drop-off locations near you.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-users"></i>
+                <h3>Customer Support</h3>
+                <p>24/7 dedicated customer assistance for your queries.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-truck"></i>
+                <h3>Fast Deliveries</h3>
+                <p>Reliable and quick delivery service to meet your needs.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
-    <section class="fade-in">
+    <section class="testimonials">
         <h2>What Our Clients Say</h2>
-        <div class="testimonials">
-            <p>"Muxtorch Delivery exceeded my expectations with their fast and reliable service!" - John Doe</p>
-            <p>"Highly recommend for their professionalism and great customer support." - Jane Smith</p>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Muxtorch Delivery is the best in the industry. Highly recommended!"</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Exceptional service! My go-to for all logistics needs."</p>
+                <h4>- Jane Smith</h4>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Follow us on:</p>
+        <p>&copy; 2025 Muxtorch Delivery. All rights reserved.</p>
+        <p>Follow us:</p>
         <div class="social-media">
-            <a href="https://facebook.com/muxtorch" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com/muxtorch" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/muxtorch" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+            <a href="https://facebook.com/muxtorch" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/muxtorch" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/muxtorch" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
@@ -73,20 +110,6 @@
 
         setInterval(showSlides, 3000); // Change slide every 3 seconds
         showSlides(); // Initial display
-
-        // Fade-in Animation Script
-        document.addEventListener("DOMContentLoaded", () => {
-            const elements = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            });
-
-            elements.forEach(el => observer.observe(el));
-        });
     </script>
 </body>
 </html>
