@@ -1,75 +1,12 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-/* Header */
-header {
-    background: #0033cc;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    background: #ff4500;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.cta-button {
-    background: white;
-    color: #ff4500;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background: #0033cc;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer .social-media a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-}
-/* General Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
 h1, h2, h3 {
@@ -79,11 +16,13 @@ h1, h2, h3 {
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .container {
@@ -95,11 +34,33 @@ section {
     padding: 50px 20px;
 }
 
+/* Header */
+header {
+    background: #0033cc;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+}
+
+header nav ul li a:hover {
+    color: #ff4500;
+}
+
 /* Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     text-align: center;
 }
 
@@ -109,10 +70,8 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #333;
     font-size: 18px;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -121,7 +80,8 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #f1f1f1;
+    background-color: #ff4500;
+    color: white;
     text-align: center;
     padding: 80px 20px;
 }
@@ -136,93 +96,103 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* CTA Button */
 .cta-button {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: white;
+    color: #ff4500;
     padding: 12px 24px;
     font-size: 18px;
     border-radius: 5px;
     display: inline-block;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
     background-color: #0056b3;
+    color: white;
 }
 
 /* Testimonials Section */
 .testimonials {
     background-color: #f9f9f9;
-    padding: 40px;
     text-align: center;
+    padding: 40px 20px;
 }
 
 .testimonial {
     margin-bottom: 20px;
     font-style: italic;
-}
-
-.testimonial p {
-    font-size: 16px;
     color: #333;
 }
 
-/* Social Media Links */
-.social-media a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 20px;
-    font-size: 18px;
-}
-
-.social-media a:hover {
-    color: #007BFF;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .nav-links {
-        display: block;
-        text-align: center;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-    }
-}@keyframes fadeIn {
+/* Fade-in Animation */
+@keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 .fade-in {
-    opacity: 0; /* Start invisible */
-    animation: fadeIn 2s ease-in-out forwards; /* 2s for duration */
-.fade-in {
     opacity: 0;
-    transform: translateY(20px); /* Start slightly below */
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0); /* Move to the original position */
+/* Footer */
+footer {
+    background: #0033cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #f00;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: darkblue;
+}
+
+/* Slideshow */
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -235,7 +205,7 @@ nav ul li a:hover {
     position: relative;
 }
 
-.text {
+.slide .text {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -258,53 +228,29 @@ nav ul li a:hover {
     to {
         opacity: 1;
     }
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-    footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
 
-footer a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-}
+    h1 {
+        font-size: 1.5em;
+    }
 
-footer a:hover {
-    color: #f00;
-}
-    form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
+    .container {
+        padding: 20px;
+    }
 
-form input, form textarea, form button {
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
-}
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
 
-form button {
-    background-color: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: darkblue;
-}
+    .cta-button {
+        padding: 10px 20px;
+    }
+    }
