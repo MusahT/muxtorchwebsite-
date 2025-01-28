@@ -1,16 +1,16 @@
 /* General Styles */
 body {
-    font-family: 'Arial', 'Roboto', sans-serif;
+    font-family: 'Poppins', 'Arial', 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa; /* Light gray background */
     color: #333;
 }
 
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
-    color: #4a00e0;
+    color: #4c4aa4; /* Updated blue color */
 }
 
 a {
@@ -28,7 +28,7 @@ a {
 
 /* Header */
 header {
-    background: #4a00e0;
+    background: #4c4aa4; /* Updated blue header background */
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -59,12 +59,12 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ff4500;
+    color: #f4b400; /* Accent yellow for hover */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #4a00e0, #ff4500);
+    background: linear-gradient(135deg, #4c4aa4, #ff4500); /* Updated gradient */
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -80,8 +80,8 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background: #fff;
-    color: #ff4500;
+    background: #f4b400; /* Updated yellow for CTA button */
+    color: #fff;
     padding: 12px 20px;
     font-size: 1.1rem;
     border: none;
@@ -91,8 +91,8 @@ header nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background: #e63900;
-    color: #fff;
+    background: #ffaa00; /* Darker yellow on hover */
+    color: #333;
 }
 
 /* Services Section */
@@ -123,7 +123,7 @@ header nav ul li a:hover {
 
 .service-card i {
     font-size: 2rem;
-    color: #4a00e0;
+    color: #4c4aa4;
 }
 
 .service-card h3 {
@@ -133,7 +133,7 @@ header nav ul li a:hover {
 
 /* Testimonials */
 .testimonials {
-    background: #4a00e0;
+    background: #4c4aa4; /* Updated blue */
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -145,7 +145,7 @@ header nav ul li a:hover {
 
 .testimonial {
     font-style: italic;
-    border-left: 4px solid #ff4500;
+    border-left: 4px solid #f4b400; /* Yellow accent for testimonial highlight */
     padding-left: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -166,7 +166,7 @@ footer .social-media a {
 }
 
 footer .social-media a:hover {
-    color: #ff4500;
+    color: #f4b400; /* Yellow accent for hover */
 }
 
 /* Responsive Design */
@@ -182,4 +182,4 @@ footer .social-media a:hover {
     .services-grid {
         grid-template-columns: 1fr;
     }
-        }
+}
