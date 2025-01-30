@@ -5,86 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Muxtorch Delivery</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Inline styles (move to style.css) */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        nav {
-            background-color: #333;
-            padding: 1rem;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        header {
-            text-align: center;
-            padding: 2rem 0;
-            background-color: #007bff;
-            color: white;
-        }
-        main {
-            padding: 2rem;
-        }
-        form {
-            background-color: #f2f2f2;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        form button {
-            background-color: #007bff;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        footer .social-media a {
-            color: white;
-            margin-right: 1rem;
-            text-decoration: none;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Muxtorch Logo">
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -94,13 +23,16 @@
     </nav>
 
     <!-- Header Section -->
-    <header>
-        <h1>Contact Muxtorch Delivery</h1>
-        <p>We’re here to assist you. Reach out to us anytime!</p>
+    <header class="hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We’re here to assist you. Reach out to us anytime!</p>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main class="container">
+        <!-- Contact Information -->
         <section>
             <h2>Contact Information</h2>
             <p><strong>Email:</strong> info@muxtorch.com</p>
@@ -120,20 +52,24 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 
-                <button type="submit">Send</button>
+                <button type="submit" class="cta-button">Send</button>
             </form>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Muxtorch Delivery</p>
-        <p>Follow us on:</p>
-        <div class="social-media">
-            <a href="https://facebook.com/muxtorch" target="_blank">Facebook</a>
-            <a href="https://twitter.com/muxtorch" target="_blank">Twitter</a>
-            <a href="https://instagram.com/muxtorch" target="_blank">Instagram</a>
+        <div class="footer-content">
+            <p>&copy; 2025 Muxtorch Delivery. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/muxtorch" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/muxtorch" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/muxtorch" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
