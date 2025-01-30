@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><header id="home" class="hero">
+    <div class="container">
+        <img src="images/logo.jpg" alt="Muxtorch Logo" style="width:200px; height:auto; margin-bottom:20px;">
+        <h1>Fast and Reliable Parcel Delivery Service</h1>
+        <p>Experience seamless delivery tailored for you.</p>
+        <a href="#services" class="cta-button">Get Started</a>
+    </div>
+</header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muxtorch Delivery</title>
@@ -11,38 +18,25 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Muxtorch Logo">
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Header -->
-    <header>
+    <!-- Hero Section -->
+    <header id="home" class="hero">
         <div class="container">
             <h1>Fast and Reliable Parcel Delivery Service</h1>
-            <p>Your Trusted Partner for All Logistics Needs</p>
-            <a href="#services" class="cta-button">Explore Services</a>
+            <p>Experience seamless delivery tailored for you.</p>
+            <a href="#services" class="cta-button">Get Started</a>
         </div>
     </header>
-
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-        <div class="slide fade">
-            <img src="slide1.jpg" alt="Reliable Delivery" style="width:100%;">
-            <div class="text">Reliable Delivery Services</div>
-        </div>
-        <div class="slide fade">
-            <img src="slide2.jpg" alt="Fast Service" style="width:100%;">
-            <div class="text">Fast and Efficient Service</div>
-        </div>
-        <div class="slide fade">
-            <img src="slide3.jpg" alt="Customer Support" style="width:100%;">
-            <div class="text">24/7 Customer Support</div>
-        </div>
-    </div>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -51,22 +45,22 @@
             <div class="service-card">
                 <i class="fas fa-box"></i>
                 <h3>Shipment Insurance</h3>
-                <p>Secure your packages with our trusted insurance options.</p>
+                <p>Secure your packages with comprehensive insurance coverage.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-map-marker-alt"></i>
-                <h3>Pick & Drop-off Locations</h3>
-                <p>Convenient pick-up and drop-off locations near you.</p>
+                <h3>Pick & Drop-off</h3>
+                <p>Convenient locations for all your logistics needs.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-users"></i>
-                <h3>Customer Support</h3>
-                <p>24/7 dedicated customer assistance for your queries.</p>
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock assistance for every delivery.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-truck"></i>
-                <h3>Fast Deliveries</h3>
-                <p>Reliable and quick delivery service to meet your needs.</p>
+                <h3>Express Deliveries</h3>
+                <p>Get your parcels delivered faster than ever.</p>
             </div>
         </div>
     </section>
@@ -76,55 +70,29 @@
         <h2>What Our Clients Say</h2>
         <div class="testimonial-slider">
             <div class="testimonial">
-                <p>"Muxtorch Delivery is the best in the industry. Highly recommended!"</p>
-                <h4>- John Doe</h4>
+                <p>"The best delivery service I've used! Highly recommended!"</p>
+                <h4>- Jane Doe</h4>
             </div>
             <div class="testimonial">
-                <p>"Exceptional service! My go-to for all logistics needs."</p>
-                <h4>- Jane Smith</h4>
+                <p>"Fast, efficient, and reliable. I love Muxtorch Delivery."</p>
+                <h4>- John Smith</h4>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Muxtorch Delivery. All rights reserved.</p>
-        <p>Follow us:</p>
-        <div class="social-media">
-            <a href="https://facebook.com/muxtorch" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/muxtorch" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/muxtorch" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="footer-content">
+            <p>&copy; 2025 Muxtorch Delivery. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script>
-        // Slideshow Script
-        let currentIndex = 0;
-        const slides = document.querySelectorAll(".slide");
-
-        function showSlides() {
-            slides.forEach(slide => (slide.style.display = "none"));
-            currentIndex = (currentIndex + 1) % slides.length;
-            slides[currentIndex].style.display = "block";
-        }
-
-        setInterval(showSlides, 3000); // Change slide every 3 seconds
-        showSlides(); // Initial display
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-<div class="slideshow-container">
-    <div class="slide fade">
-        <img src="images/delivery1.jpg" alt="Reliable Delivery" style="width:100%;">
-        <div class="text">Reliable Delivery Services</div>
-    </div>
-    <div class="slide fade">
-        <img src="images/customer_receiving.jpg" alt="Fast Service" style="width:100%;">
-        <div class="text">Fast and Efficient Service</div>
-    </div>
-    <div class="slide fade">
-        <img src="images/logistics.jpg" alt="Customer Support" style="width:100%;">
-        <div class="text">24/7 Customer Support</div>
-    </div>
-</div>
